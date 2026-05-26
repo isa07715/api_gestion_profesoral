@@ -1,0 +1,51 @@
+# ─────────────────────────────────────────────────────────────
+# Framework web asíncrono para construir la API REST.
+# FastAPI es el framework principal. Proporciona:
+# - Decoradores para definir rutas (@router.get, @router.post)
+# - Validación automática con Pydantic
+# - Documentación Swagger UI generada automáticamente en /docs
+# - Soporte nativo para async/await (alto rendimiento)
+# ─────────────────────────────────────────────────────────────
+fastapi>=0.100.0
+
+# ─────────────────────────────────────────────────────────────
+# Servidor ASGI que ejecuta la aplicación FastAPI.
+# ASGI = Asynchronous Server Gateway Interface.
+# uvicorn recibe peticiones HTTP y las pasa a FastAPI.
+# [standard] incluye herramientas adicionales para mejor rendimiento.
+# Comando para ejecutar: uvicorn main:app --reload
+# ─────────────────────────────────────────────────────────────
+uvicorn[standard]>=0.22.0
+
+# ─────────────────────────────────────────────────────────────
+# Librería de validación de datos.
+# Pydantic v2 valida automáticamente los datos que recibe la API.
+# ─────────────────────────────────────────────────────────────
+pydantic>=2.0.0
+
+# ─────────────────────────────────────────────────────────────
+# Extensión de Pydantic para leer configuración desde archivos .env.
+# ─────────────────────────────────────────────────────────────
+pydantic-settings>=2.0.0
+
+# ─────────────────────────────────────────────────────────────
+# Soporte alternativo para cargar archivos .env.
+# ─────────────────────────────────────────────────────────────
+python-dotenv>=1.0.0
+
+# ─────────────────────────────────────────────────────────────
+# Driver asíncrono para PostgreSQL.
+# asyncpg es el driver más rápido para PostgreSQL en Python.
+# ─────────────────────────────────────────────────────────────
+asyncpg>=0.28.0
+
+# ─────────────────────────────────────────────────────────────
+# ORM asíncrono (usamos SOLO como query builder, NO como ORM).
+# SQLAlchemy proporciona create_async_engine y text() para SQL crudo.
+# ─────────────────────────────────────────────────────────────
+sqlalchemy[asyncio]>=2.0.0
+
+# ─────────────────────────────────────────────────────────────
+# Requerido internamente por SQLAlchemy para async.
+# ─────────────────────────────────────────────────────────────
+greenlet>=3.0.0

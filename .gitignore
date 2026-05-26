@@ -1,0 +1,33 @@
+# Entorno virtual (no se sube, cada persona lo crea con pip install)
+venv/
+.venv/
+env/
+
+# Variables de entorno (contienen contraseñas)
+.env
+.env.development
+.env.production
+
+# Cache de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# Logs
+*.log
+logs/
+
+# Base de datos local (si se usa SQLite)
+*.db
+*.sqlite3
+
+# Build
+dist/
+build/
+*.egg-info/
